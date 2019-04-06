@@ -19,6 +19,7 @@ class UserService
 			'name' => $this->user->getName(),
 			'email' => $this->user->getEmail(),
 			'avatar' => gravatar($this->user->getEmail()),
+			// 'social_media_accounts' => $this->user->getSocialMediaAccounts();
 		];
 	}
 }

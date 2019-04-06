@@ -2,12 +2,13 @@
 
 namespace App;
 
+use App\Contracts\EmployeeContract;
 use App\Contracts\UserContract;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable implements UserContract
+class User extends Authenticatable implements UserContract, EmployeeContract
 {
     use Notifiable;
 
@@ -47,5 +48,15 @@ class User extends Authenticatable implements UserContract
     public function getEmail(): string
     {
         return $this->email;
+    }
+
+    public function offerLetter()
+    {
+        return 'offerLetter';
+    }
+
+    public function salary()
+    {
+        return 'salary';
     }
 }

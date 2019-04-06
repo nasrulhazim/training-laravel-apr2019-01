@@ -3,17 +3,17 @@
 use Illuminate\Support\Facades\Route;
 
 Route::macro('setting', function($name) {
-// Route::get('setting/user', 'UserController@edit')->name('setting.user.edit');
-Route::get(
-    'setting/' . \Illuminate\Support\Str::kebab($name), 
-    'Setting\\' . \Illuminate\Support\Str::studly($name) . 'Controller@edit'
-)->name('setting.' . \Illuminate\Support\Str::kebab($name) . '.edit');
+	// Route::get('setting/user', 'UserController@edit')->name('setting.user.edit');
+	Route::get(
+	    'setting/' . \Illuminate\Support\Str::kebab($name), 
+	    'Setting\\' . \Illuminate\Support\Str::studly($name) . 'Controller@edit'
+	)->name('setting.' . \Illuminate\Support\Str::kebab($name) . '.edit');
 
-// Route::put('setting/user', 'UserController@update')->name('setting.user.update');
-Route::put(
-    'setting/' . \Illuminate\Support\Str::kebab($name), 
-    'Setting\\' . \Illuminate\Support\Str::studly($name) . 'Controller@update'
-)->name('setting.' . \Illuminate\Support\Str::kebab($name) . '.update');
+	// Route::put('setting/user', 'UserController@update')->name('setting.user.update');
+	Route::put(
+	    'setting/' . \Illuminate\Support\Str::kebab($name), 
+	    'Setting\\' . \Illuminate\Support\Str::studly($name) . 'Controller@update'
+	)->name('setting.' . \Illuminate\Support\Str::kebab($name) . '.update');
 });
 
 // Route::setting('User');

@@ -7,6 +7,16 @@ collect(glob(__DIR__ . '/*.php')) // ['campus.php', 'student.php']
         }
     });
 
+/*
+ * Get gravatar image if any.
+ */
+if (! function_exists('gravatar')) {
+    function gravatar($email, $size = 36)
+    {
+        return 'https://www.gravatar.com/avatar/' . md5($email) . '?s=' . $size;
+    }
+}
+
 if(! function_exists('hi')) {
 	function hi()
 	{

@@ -103,9 +103,11 @@ php artisan make:test SeedProductionCommandTest
 ### Laravel Dusk
 
 ```
-$ composer require --dev laravel/dusk
-$ php artisan dusk:install
-$ cp .env .env.dusk.local
+$ composer require --dev laravel/dusk && php artisan dusk:install && cp .env .env.dusk.local
+```
+
+```
+$ php artisan dusk:make LoginTest
 ```
 
 ## Laravel Nova
